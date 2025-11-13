@@ -322,7 +322,7 @@
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-lg);
             width: 100%;
-            margin-top: var(--space-xl);
+            margin-top: var(--space-lg);
         }
 
         .problem-card {
@@ -375,19 +375,20 @@
         .demo-layout {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: var(--space-lg);
+            gap: var(--space-md);
             width: 100%;
             align-items: start;
+            max-height: calc(100vh - 180px);
         }
 
         .phone-simulator {
             background: var(--glass-bg);
             backdrop-filter: blur(30px);
             border: 2px solid var(--glass-border);
-            border-radius: 36px;
-            padding: 12px;
+            border-radius: 32px;
+            padding: 10px;
             width: 100%;
-            max-width: 320px;
+            max-width: 300px;
             margin: 0 auto;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -396,11 +397,14 @@
 
         .phone-screen {
             background: #000;
-            border-radius: 32px;
-            padding: var(--space-md);
-            min-height: 450px;
+            border-radius: 28px;
+            padding: 14px;
+            min-height: 400px;
+            max-height: 500px;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
 
         .phone-notch {
@@ -408,44 +412,45 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 150px;
-            height: 30px;
+            width: 120px;
+            height: 24px;
             background: #000;
-            border-radius: 0 0 20px 20px;
+            border-radius: 0 0 16px 16px;
             z-index: 10;
         }
 
         .call-header {
             text-align: center;
-            padding-top: 16px;
-            margin-bottom: 20px;
+            padding-top: 12px;
+            margin-bottom: 14px;
         }
 
         .call-status {
             color: var(--text-muted);
-            font-size: 12px;
-            margin-bottom: 6px;
+            font-size: 10px;
+            margin-bottom: 4px;
         }
 
         .call-name {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .call-type {
-            font-size: 14px;
+            font-size: 12px;
             color: var(--primary);
         }
 
         .conversation-box {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 16px;
-            padding: 16px;
-            margin-bottom: 16px;
-            min-height: 240px;
-            max-height: 340px;
+            border-radius: 14px;
+            padding: 12px;
+            margin-bottom: 12px;
+            min-height: 200px;
+            max-height: 280px;
             overflow-y: auto;
+            flex: 1;
         }
 
         .message {
@@ -465,17 +470,17 @@
         }
 
         .message-label {
-            font-size: 11px;
+            font-size: 10px;
             color: var(--text-muted);
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .message-text {
             background: rgba(255, 255, 255, 0.08);
-            padding: 12px;
-            border-radius: 10px;
-            font-size: 13px;
-            line-height: 1.5;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 12px;
+            line-height: 1.4;
         }
 
         .message.ai .message-text {
@@ -513,20 +518,20 @@
         .call-controls {
             display: flex;
             justify-content: center;
-            gap: 16px;
-            margin-top: 16px;
+            gap: 12px;
+            margin-top: 10px;
         }
 
         .call-button {
-            width: 54px;
-            height: 54px;
+            width: 48px;
+            height: 48px;
             border-radius: 50%;
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
+            font-size: 18px;
             transition: all 0.3s ease;
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -546,22 +551,22 @@
 
         /* Scenario selector */
         .scenario-selector {
-            margin-bottom: var(--space-lg);
+            margin-bottom: 12px;
         }
 
         .scenario-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
-            gap: 10px;
-            margin-top: var(--space-sm);
+            grid-template-columns: repeat(3, 1fr);
+            gap: 8px;
+            margin-top: 8px;
         }
 
         .scenario-card {
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
             border: 2px solid var(--glass-border);
-            border-radius: 10px;
-            padding: 14px;
+            border-radius: 8px;
+            padding: 10px;
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -577,67 +582,276 @@
         }
 
         .scenario-icon {
-            font-size: 28px;
-            margin-bottom: 6px;
-        }
-
-        .scenario-title {
-            font-size: 14px;
-            font-weight: 600;
+            font-size: 24px;
             margin-bottom: 4px;
         }
 
-        .scenario-desc {
-            font-size: 12px;
-            color: var(--text-muted);
+        .scenario-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 3px;
         }
 
-        /* Backend visualization */
+        .scenario-desc {
+            font-size: 10px;
+            color: var(--text-muted);
+            line-height: 1.3;
+        }
+
+        /* Backend visualization - ADVANCED TRIPLE LAYER */
         .backend-viz {
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 14px;
-            padding: 16px;
+            border-radius: 12px;
+            padding: 12px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            max-height: calc(100vh - 200px);
+            overflow-y: auto;
+        }
+
+        /* Layer A: Step List */
+        .backend-steps-container {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
         .backend-step {
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 10px;
-            margin-bottom: 8px;
-            border-radius: 8px;
+            padding: 8px 10px;
+            border-radius: 6px;
             opacity: 0.3;
             transition: all 0.4s ease;
-            font-size: 13px;
+            font-size: 12px;
+            background: rgba(255, 255, 255, 0.02);
+            border-left: 2px solid transparent;
         }
 
         .backend-step.active {
             opacity: 1;
-            background: rgba(0, 217, 163, 0.1);
+            background: rgba(0, 217, 163, 0.12);
+            border-left-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 217, 163, 0.2);
+        }
+
+        .backend-step.completed {
+            opacity: 0.6;
+            border-left-color: rgba(0, 217, 163, 0.4);
         }
 
         .backend-step-icon {
             width: 24px;
             height: 24px;
             border-radius: 50%;
-            background: var(--primary);
-            color: #000;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            color: var(--text-muted);
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 12px;
             flex-shrink: 0;
+            transition: all 0.4s ease;
         }
 
         .backend-step.active .backend-step-icon {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: #000;
             animation: pulse-icon 1.5s infinite;
+            box-shadow: 0 0 12px rgba(0, 217, 163, 0.6);
+        }
+
+        .backend-step.completed .backend-step-icon {
+            background: rgba(0, 217, 163, 0.3);
+            border-color: rgba(0, 217, 163, 0.5);
+            color: var(--primary);
         }
 
         @keyframes pulse-icon {
             0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.1); }
+            50% { transform: scale(1.15); }
+        }
+
+        /* Layer B: Flow Graph */
+        .backend-flow-graph {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 8px;
+            padding: 12px;
+            min-height: 110px;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .flow-graph-title {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .flow-nodes {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 12px;
+        }
+
+        .flow-node {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            opacity: 0.3;
+            transition: all 0.5s ease;
+            position: relative;
+            z-index: 2;
+        }
+
+        .flow-node.active {
+            opacity: 1;
+            animation: fadeInScale 0.5s ease;
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        .flow-node-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--glass-bg);
+            border: 2px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.4s ease;
+        }
+
+        .flow-node.active .flow-node-circle {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(0, 217, 163, 0.6);
+            animation: pulse-glow 2s infinite;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(0, 217, 163, 0.6); }
+            50% { box-shadow: 0 0 30px rgba(0, 217, 163, 0.9); }
+        }
+
+        .flow-node-label {
+            font-size: 9px;
+            color: var(--text-muted);
+            text-align: center;
+            max-width: 60px;
+            line-height: 1.2;
+        }
+
+        .flow-node.active .flow-node-label {
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        .flow-connection-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+
+        .flow-progress-line {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: translateY(-50%);
+            width: 0%;
+            transition: width 0.8s ease;
+            box-shadow: 0 0 10px var(--primary);
+            z-index: 1;
+        }
+
+        /* Layer C: Real-time Log (Minimal 1-line) */
+        .backend-realtime-log {
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 6px;
+            padding: 8px 10px;
+            font-family: 'Courier New', monospace;
+            font-size: 10px;
+            color: var(--primary);
+            border: 1px solid rgba(0, 217, 163, 0.2);
+            min-height: 30px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .log-indicator {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--primary);
+            flex-shrink: 0;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        .log-text {
+            flex: 1;
+            opacity: 0.9;
+            line-height: 1.3;
+            animation: fadeInLog 0.4s ease;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @keyframes fadeInLog {
+            from {
+                opacity: 0;
+                transform: translateX(-10px);
+            }
+            to {
+                opacity: 0.9;
+                transform: translateX(0);
+            }
+        }
+
+        .log-timestamp {
+            font-size: 9px;
+            color: var(--text-muted);
+            opacity: 0.6;
+            flex-shrink: 0;
         }
 
         /* Feature grid */
@@ -1076,7 +1290,7 @@
             </div>
 
             <!-- SLIDE 2: PROBLEM -->
-            <div class="slide" data-slide="2">
+            <div class="slide" data-slide="2" style="padding-bottom: 80px;">
                 <div class="slide-content">
                     <div class="center-content">
                         <h2 class="slide-title text-center">Utmaningen företag står inför</h2>
@@ -1085,7 +1299,7 @@
                         <div class="problem-grid">
                             <div class="glass-card problem-card">
                                 <span class="problem-icon">📞</span>
-                                <div class="problem-title">Köbildning</div>
+                                <div class="problem-title">Kunder får vänta</div>
                             </div>
                             <div class="glass-card problem-card">
                                 <span class="problem-icon">💰</span>
@@ -1101,18 +1315,17 @@
             </div>
 
             <!-- SLIDE 3: DEMO INCOMING -->
-            <div class="slide" data-slide="3" style="padding: 30px 24px;">
+            <div class="slide" data-slide="3" style="padding: 20px 24px;">
                 <div class="slide-content">
                     <div style="width: 100%;">
-                        <div class="text-center" style="margin-bottom: 16px;">
-                            <h2 class="slide-title" style="font-size: clamp(24px, 4vw, 48px); margin-bottom: 8px;">Se AI:n i aktion</h2>
-                            <p class="slide-subtitle" style="font-size: clamp(14px, 1.5vw, 18px);">Välj ett scenario och upplev hur AI-assistenten hanterar samtalet professionellt</p>
+                        <div class="text-center" style="margin-bottom: 12px;">
+                            <h2 class="slide-title" style="font-size: clamp(20px, 3.5vw, 36px); margin-bottom: 6px;">Se AI:n i aktion</h2>
                         </div>
 
-                        <div class="demo-layout">
+                        <div class="demo-layout" style="gap: 16px;">
                             <div>
                                 <div class="scenario-selector">
-                                    <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 8px;">Välj scenario:</h3>
+                                    <h3 style="font-size: 12px; font-weight: 700; margin-bottom: 6px; opacity: 0.9;">Välj scenario:</h3>
                                     <div class="scenario-grid">
                                         <div class="scenario-card active" data-scenario="booking">
                                             <div class="scenario-icon">📅</div>
@@ -1132,27 +1345,64 @@
                                     </div>
                                 </div>
 
-                                <div class="backend-viz" style="margin-top: 12px;">
-                                    <h4 style="font-size: 13px; font-weight: 700; margin-bottom: 8px;">Backend i realtid:</h4>
-                                    <div class="backend-step" id="backend-1">
-                                        <div class="backend-step-icon">📥</div>
-                                        <div>Tar emot samtal...</div>
+                                <div class="backend-viz" style="margin-top: 10px;">
+                                    <h4 style="font-size: 12px; font-weight: 700; margin-bottom: 10px; opacity: 0.9;">Backend i realtid:</h4>
+
+                                    <!-- Layer A: Step List -->
+                                    <div class="backend-steps-container">
+                                        <div class="backend-step" id="backend-1">
+                                            <div class="backend-step-icon">📥</div>
+                                            <div>Tar emot samtal</div>
+                                        </div>
+                                        <div class="backend-step" id="backend-2">
+                                            <div class="backend-step-icon">🤖</div>
+                                            <div>Analyserar behov</div>
+                                        </div>
+                                        <div class="backend-step" id="backend-3">
+                                            <div class="backend-step-icon">📊</div>
+                                            <div>Hämtar data</div>
+                                        </div>
+                                        <div class="backend-step" id="backend-4">
+                                            <div class="backend-step-icon">⚡</div>
+                                            <div>Utför handling</div>
+                                        </div>
+                                        <div class="backend-step" id="backend-5">
+                                            <div class="backend-step-icon">✓</div>
+                                            <div>Bekräftar</div>
+                                        </div>
                                     </div>
-                                    <div class="backend-step" id="backend-2">
-                                        <div class="backend-step-icon">🤖</div>
-                                        <div>Analyserar behov...</div>
+
+                                    <!-- Layer B: Flow Graph -->
+                                    <div class="backend-flow-graph">
+                                        <div class="flow-graph-title">Processflöde</div>
+                                        <div class="flow-nodes">
+                                            <div class="flow-connection-line"></div>
+                                            <div class="flow-progress-line" id="flowProgress"></div>
+
+                                            <div class="flow-node" id="flow-1">
+                                                <div class="flow-node-circle">📞</div>
+                                                <div class="flow-node-label">Mottagning</div>
+                                            </div>
+                                            <div class="flow-node" id="flow-2">
+                                                <div class="flow-node-circle">🧠</div>
+                                                <div class="flow-node-label">AI-analys</div>
+                                            </div>
+                                            <div class="flow-node" id="flow-3">
+                                                <div class="flow-node-circle">🔄</div>
+                                                <div class="flow-node-label">Integration</div>
+                                            </div>
+                                            <div class="flow-node" id="flow-4">
+                                                <div class="flow-node-circle">✅</div>
+                                                <div class="flow-node-label">Avslutar</div>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="backend-step" id="backend-3">
-                                        <div class="backend-step-icon">📊</div>
-                                        <div>Hämtar från CRM...</div>
-                                    </div>
-                                    <div class="backend-step" id="backend-4">
-                                        <div class="backend-step-icon">📅</div>
-                                        <div>Uppdaterar kalender...</div>
-                                    </div>
-                                    <div class="backend-step" id="backend-5">
-                                        <div class="backend-step-icon">✉️</div>
-                                        <div>Skickar bekräftelse...</div>
+
+                                    <!-- Layer C: Real-time Log -->
+                                    <div class="backend-realtime-log">
+                                        <div class="log-indicator"></div>
+                                        <div class="log-text" id="logText">Väntar på aktivitet...</div>
+                                        <div class="log-timestamp" id="logTime">--:--</div>
                                     </div>
                                 </div>
                             </div>
@@ -1396,41 +1646,61 @@
         let messageTimeout;
 
         // ===== SCENARIOS DATA =====
+        // Följer storytelling-struktur: Intro → Behov → Analys → Handling → Backend-synk → Bekräftelse → Värdeblock
+        // Alla scenarier har exakt 8 meddelanden och samma komplexitet
         const scenarios = {
             booking: {
+                name: 'Mötesbokning',
                 messages: [
-                    { speaker: 'customer', text: 'Hej, jag skulle vilja boka ett möte med er säljteam.', backendStep: 1 },
-                    { speaker: 'ai', text: 'Hej och välkommen! Jag hjälper dig gärna med det. Vilket datum passar dig bäst?', backendStep: 2 },
-                    { speaker: 'customer', text: 'Nästa onsdag om möjligt, på förmiddagen.', backendStep: 3 },
-                    { speaker: 'ai', text: 'Perfekt! Jag ser att vi har ledigt klockan 10:00. Passar det?', backendStep: 3 },
-                    { speaker: 'customer', text: 'Ja, det passar utmärkt!', backendStep: 4 },
-                    { speaker: 'ai', text: 'Utmärkt! Jag har bokat in dig för onsdag den 20:e kl 10:00. Du får en bekräftelse via e-post inom några minuter. Något mer jag kan hjälpa till med?', backendStep: 5 },
-                    { speaker: 'customer', text: 'Nej tack, det var allt!', backendStep: 5 },
-                    { speaker: 'ai', text: 'Tack för att du kontaktade oss! Vi ses på onsdagen. Ha en fortsatt trevlig dag!', backendStep: 5 }
+                    // Intro
+                    { speaker: 'customer', text: 'Hej, jag vill boka ett möte med säljteamet.', backendStep: 1, flowStep: 1, log: 'INCOMING_CALL | Mottar samtal från +46701234567' },
+                    // Behov + Analys
+                    { speaker: 'ai', text: 'Välkommen! Vilket datum passar dig?', backendStep: 2, flowStep: 2, log: 'AI_ANALYZE | Identifierar intent: mötesbokningsförfrågan' },
+                    { speaker: 'customer', text: 'Nästa onsdag förmiddag.', backendStep: 2, flowStep: 2, log: 'PROCESSING | Tolkar tidsangivelse: Onsdag 10:00-12:00' },
+                    // Handling
+                    { speaker: 'ai', text: 'Perfekt! Kl 10:00 är ledigt. Passar det?', backendStep: 3, flowStep: 3, log: 'CRM_QUERY | Hämtar kalenderdata från Outlook API' },
+                    { speaker: 'customer', text: 'Ja, det passar utmärkt!', backendStep: 4, flowStep: 3, log: 'BOOKING | Skapar möte: 2025-11-20 10:00 CET' },
+                    // Bekräftelse
+                    { speaker: 'ai', text: 'Bokat! Du får bekräftelse via e-post.', backendStep: 5, flowStep: 4, log: 'EMAIL_SENT | Skickade bekräftelse till anna@example.com' },
+                    { speaker: 'customer', text: 'Tack, det var allt!', backendStep: 5, flowStep: 4, log: 'STATUS | Samtal avslutas med framgång' },
+                    // Värdeblock
+                    { speaker: 'ai', text: 'Tack för att du kontaktade oss! Ses på onsdagen.', backendStep: 5, flowStep: 4, log: 'COMPLETED | Total samtalstid: 42 sekunder' }
                 ]
             },
             faq: {
+                name: 'FAQ Priser',
                 messages: [
-                    { speaker: 'customer', text: 'Hej, jag undrar vad era tjänster kostar?', backendStep: 1 },
-                    { speaker: 'ai', text: 'Hej! Tack för din fråga. Vi har tre olika paket: Bas, Standard och Premium. Vilket som passar bäst beror på era behov.', backendStep: 2 },
-                    { speaker: 'customer', text: 'Vad ingår i standardpaketet?', backendStep: 2 },
-                    { speaker: 'ai', text: 'Standardpaketet inkluderar alla basfunktioner plus utgående samtal, avancerade integrationer, prioriterad support och kundanpassad träning. Det är vårt mest populära val.', backendStep: 3 },
-                    { speaker: 'customer', text: 'Hur lång är implementeringstiden?', backendStep: 3 },
-                    { speaker: 'ai', text: 'Vi kan ha er igång på 5-10 arbetsdagar efter godkänd offert. Vill du att jag bokar ett möte med vårt säljteam för en skräddarsydd demo?', backendStep: 3 },
-                    { speaker: 'customer', text: 'Ja gärna!', backendStep: 4 },
-                    { speaker: 'ai', text: 'Perfekt! Jag kopplar dig till en kollega som kan boka in ett möte. Ett ögonblick...', backendStep: 5 }
+                    // Intro
+                    { speaker: 'customer', text: 'Hej, vad kostar era tjänster?', backendStep: 1, flowStep: 1, log: 'INCOMING_CALL | Mottar samtal från +46709876543' },
+                    // Behov + Analys
+                    { speaker: 'ai', text: 'Välkommen! Vi har tre paket: Bas, Standard och Premium.', backendStep: 2, flowStep: 2, log: 'AI_ANALYZE | Identifierar intent: prisinformation' },
+                    { speaker: 'customer', text: 'Vad ingår i Standard?', backendStep: 2, flowStep: 2, log: 'PROCESSING | Hämtar produktinformation för Standard-paketet' },
+                    // Handling
+                    { speaker: 'ai', text: 'Standard inkluderar utgående samtal och prioriterad support.', backendStep: 3, flowStep: 3, log: 'KNOWLEDGE_BASE | Hämtar FAQ-data från intern databas' },
+                    { speaker: 'customer', text: 'Hur lång är implementeringstiden?', backendStep: 4, flowStep: 3, log: 'QUERY | Söker information om implementeringsprocess' },
+                    // Bekräftelse
+                    { speaker: 'ai', text: '5-10 arbetsdagar. Vill du boka en demo?', backendStep: 5, flowStep: 4, log: 'OFFER | Presenterar nästa steg: demo-möte' },
+                    { speaker: 'customer', text: 'Ja, gärna!', backendStep: 5, flowStep: 4, log: 'TRANSFER | Förbereder överföring till säljteam' },
+                    // Värdeblock
+                    { speaker: 'ai', text: 'Perfekt! Kopplar dig till en kollega nu.', backendStep: 5, flowStep: 4, log: 'COMPLETED | Överför till agent, total tid: 38 sekunder' }
                 ]
             },
             support: {
+                name: 'Akut Support',
                 messages: [
-                    { speaker: 'customer', text: 'Hej, vi har ett tekniskt problem med systemet!', backendStep: 1 },
-                    { speaker: 'ai', text: 'Jag förstår att det är brådskande. Kan du beskriva problemet?', backendStep: 2 },
-                    { speaker: 'customer', text: 'Samtalen går inte fram till rätt avdelning.', backendStep: 2 },
-                    { speaker: 'ai', text: 'Tack för informationen. Jag skapar ett prioriterat ärende och kopplar dig direkt till vår tekniska support. De hjälper dig inom 5 minuter.', backendStep: 3 },
-                    { speaker: 'customer', text: 'Tack, det är bra!', backendStep: 3 },
-                    { speaker: 'ai', text: 'Jag har skapat ärende #12345 och du får en bekräftelse via e-post. Teknisk support ringer dig inom kort. Är det något mer akut jag kan hjälpa med nu?', backendStep: 5 },
-                    { speaker: 'customer', text: 'Nej, det räcker. Tack!', backendStep: 5 },
-                    { speaker: 'ai', text: 'Självklart. Vi ser till att lösa detta snabbt. Ha en bra dag!', backendStep: 5 }
+                    // Intro
+                    { speaker: 'customer', text: 'Hej, vi har ett akut tekniskt problem!', backendStep: 1, flowStep: 1, log: 'INCOMING_CALL | Mottar samtal från +46705551234' },
+                    // Behov + Analys
+                    { speaker: 'ai', text: 'Jag förstår att det är brådskande. Beskriv problemet.', backendStep: 2, flowStep: 2, log: 'AI_ANALYZE | Identifierar intent: akut support, prio: HÖG' },
+                    { speaker: 'customer', text: 'Samtal går inte till rätt avdelning.', backendStep: 2, flowStep: 2, log: 'PROCESSING | Kategoriserar: Routing-fel, Severity: P1' },
+                    // Handling
+                    { speaker: 'ai', text: 'Jag skapar ett prioriterat ärende direkt.', backendStep: 3, flowStep: 3, log: 'TICKET_CREATE | Skapar ärende #12345 i Zendesk' },
+                    { speaker: 'customer', text: 'Hur snabbt kan ni hjälpa?', backendStep: 4, flowStep: 3, log: 'SLA_CHECK | SLA för P1: Max 15 minuter responstid' },
+                    // Bekräftelse
+                    { speaker: 'ai', text: 'Support ringer dig inom 5 minuter.', backendStep: 5, flowStep: 4, log: 'ESCALATION | Notifierar jourhavande tekniker' },
+                    { speaker: 'customer', text: 'Tack, det är bra!', backendStep: 5, flowStep: 4, log: 'NOTIFICATION | SMS och e-post skickat med ärendenummer' },
+                    // Värdeblock
+                    { speaker: 'ai', text: 'Vi löser detta snabbt. Ha en bra dag!', backendStep: 5, flowStep: 4, log: 'COMPLETED | Ärende eskalerat, total tid: 35 sekunder' }
                 ]
             }
         };
@@ -1545,9 +1815,21 @@
             const message = scenario.messages[messageIndex];
             const typing = document.getElementById('typing');
 
-            // Update backend step if specified for this message
+            // ===== SYNKRONISERA ALLA TRE BACKEND-LAGER =====
+
+            // Layer A: Backend Step List
             if (message.backendStep) {
                 activateBackendStep(message.backendStep);
+            }
+
+            // Layer B: Flow Graph
+            if (message.flowStep) {
+                activateFlowStep(message.flowStep);
+            }
+
+            // Layer C: Real-time Log
+            if (message.log) {
+                updateRealtimeLog(message.log);
             }
 
             if (message.speaker === 'ai') {
@@ -1587,14 +1869,56 @@
             conversationBox.scrollTop = conversationBox.scrollHeight;
         }
 
+        // ===== BACKEND TRIPLE LAYER SYNC =====
         function activateBackendStep(stepNumber) {
-            document.querySelectorAll('.backend-step').forEach(step => {
+            // Markera tidigare steg som completed
+            document.querySelectorAll('.backend-step').forEach((step, index) => {
                 step.classList.remove('active');
+                if (index < stepNumber - 1) {
+                    step.classList.add('completed');
+                } else {
+                    step.classList.remove('completed');
+                }
             });
 
+            // Aktivera nuvarande steg
             const step = document.getElementById(`backend-${stepNumber}`);
             if (step) {
                 step.classList.add('active');
+            }
+        }
+
+        function activateFlowStep(flowNumber) {
+            // Aktivera flow nodes progressivt
+            document.querySelectorAll('.flow-node').forEach((node, index) => {
+                if (index < flowNumber) {
+                    node.classList.add('active');
+                } else {
+                    node.classList.remove('active');
+                }
+            });
+
+            // Uppdatera progress line
+            const progressLine = document.getElementById('flowProgress');
+            if (progressLine) {
+                const progressPercent = ((flowNumber - 1) / 3) * 100; // 4 nodes = 3 gaps
+                progressLine.style.width = `${progressPercent}%`;
+            }
+        }
+
+        function updateRealtimeLog(logMessage) {
+            const logText = document.getElementById('logText');
+            const logTime = document.getElementById('logTime');
+
+            if (logText && logMessage) {
+                logText.textContent = logMessage;
+
+                // Update timestamp
+                const now = new Date();
+                const time = now.toTimeString().substring(0, 5);
+                if (logTime) {
+                    logTime.textContent = time;
+                }
             }
         }
 
@@ -1611,9 +1935,24 @@
             const typing = document.getElementById('typing');
             typing.classList.remove('active');
 
+            // Reset alla backend-lager
             document.querySelectorAll('.backend-step').forEach(step => {
-                step.classList.remove('active');
+                step.classList.remove('active', 'completed');
             });
+
+            document.querySelectorAll('.flow-node').forEach(node => {
+                node.classList.remove('active');
+            });
+
+            const progressLine = document.getElementById('flowProgress');
+            if (progressLine) {
+                progressLine.style.width = '0%';
+            }
+
+            const logText = document.getElementById('logText');
+            const logTime = document.getElementById('logTime');
+            if (logText) logText.textContent = 'Väntar på aktivitet...';
+            if (logTime) logTime.textContent = '--:--';
 
             clearTimeout(messageTimeout);
         }
