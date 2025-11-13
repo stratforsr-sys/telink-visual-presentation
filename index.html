@@ -384,10 +384,10 @@
             background: var(--glass-bg);
             backdrop-filter: blur(30px);
             border: 2px solid var(--glass-border);
-            border-radius: 48px;
-            padding: var(--space-md);
+            border-radius: 40px;
+            padding: var(--space-sm);
             width: 100%;
-            max-width: 400px;
+            max-width: 350px;
             margin: 0 auto;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -396,9 +396,9 @@
 
         .phone-screen {
             background: #000;
-            border-radius: 40px;
-            padding: var(--space-lg);
-            min-height: 600px;
+            border-radius: 36px;
+            padding: var(--space-md);
+            min-height: 500px;
             position: relative;
             overflow: hidden;
         }
@@ -561,7 +561,7 @@
             backdrop-filter: blur(10px);
             border: 2px solid var(--glass-border);
             border-radius: 12px;
-            padding: var(--space-md);
+            padding: var(--space-sm);
             cursor: pointer;
             transition: all 0.3s ease;
         }
@@ -577,17 +577,18 @@
         }
 
         .scenario-icon {
-            font-size: 32px;
+            font-size: 28px;
             margin-bottom: var(--space-xs);
         }
 
         .scenario-title {
+            font-size: 15px;
             font-weight: 600;
             margin-bottom: 4px;
         }
 
         .scenario-desc {
-            font-size: 13px;
+            font-size: 12px;
             color: var(--text-muted);
         }
 
@@ -596,19 +597,20 @@
             background: var(--glass-bg);
             backdrop-filter: blur(20px);
             border: 1px solid var(--glass-border);
-            border-radius: 20px;
-            padding: var(--space-lg);
+            border-radius: 16px;
+            padding: var(--space-md);
         }
 
         .backend-step {
             display: flex;
             align-items: center;
-            gap: var(--space-sm);
-            padding: var(--space-sm);
+            gap: var(--space-xs);
+            padding: var(--space-xs);
             margin-bottom: var(--space-xs);
-            border-radius: 8px;
+            border-radius: 6px;
             opacity: 0.3;
             transition: all 0.4s ease;
+            font-size: 14px;
         }
 
         .backend-step.active {
@@ -617,15 +619,15 @@
         }
 
         .backend-step-icon {
-            width: 32px;
-            height: 32px;
+            width: 28px;
+            height: 28px;
             border-radius: 50%;
             background: var(--primary);
             color: #000;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 16px;
+            font-size: 14px;
             flex-shrink: 0;
         }
 
@@ -1106,7 +1108,7 @@
                         <div class="demo-layout">
                             <div>
                                 <div class="scenario-selector">
-                                    <h3 style="font-size: 24px; font-weight: 700; margin-bottom: var(--space-md);">Välj scenario:</h3>
+                                    <h3 style="font-size: 18px; font-weight: 700; margin-bottom: var(--space-sm);">Välj scenario:</h3>
                                     <div class="scenario-grid">
                                         <div class="scenario-card active" data-scenario="booking">
                                             <div class="scenario-icon">📅</div>
@@ -1126,8 +1128,8 @@
                                     </div>
                                 </div>
 
-                                <div class="backend-viz" style="margin-top: var(--space-lg);">
-                                    <h4 style="font-size: 20px; font-weight: 700; margin-bottom: var(--space-md);">Backend i realtid:</h4>
+                                <div class="backend-viz" style="margin-top: var(--space-md);">
+                                    <h4 style="font-size: 16px; font-weight: 700; margin-bottom: var(--space-sm);">Backend i realtid:</h4>
                                     <div class="backend-step" id="backend-1">
                                         <div class="backend-step-icon">📥</div>
                                         <div>Tar emot samtal...</div>
