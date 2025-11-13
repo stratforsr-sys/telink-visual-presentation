@@ -1,0 +1,592 @@
+planering:
+  steg:
+    - nr: 1
+      namn: Konceptuell grund och målsättning
+      detaljer: |
+        Skapa en interaktiv säljpresentation (inte publik webbsida) för live-möten där Zen kan:
+        - Visa AI-assistentens funktioner visuellt steg för steg
+        - Simulera faktiska samtal live under presentationen
+        - Bygga förtroende genom interaktiv demonstration
+        - Presentera KPI:er, integrationer och paket på ett engagerande sätt
+        
+        Målgrupp: Potentiella B2B-kunder under säljmöten
+        Format: Single-page application med fullscreen-sektioner
+        Stil: Glassmorphism med Telink's gröna/blå färgpalett
+        Längd: ~15-20 minuter interaktiv presentation
+        
+      best_practices:
+        - Interaktiv demo > statisk presentation (genomsnittlig konvertering ökar 47%)
+        - Under 20 minuter totalt enligt B2B best practices
+        - Hands-on simulation ökar engagemang och minne
+        - Storytelling: Problem → Lösning → Bevis → Action
+        - Visuellt driven med minimal text
+        - ROI och konkreta siffror framhävs tydligt
+        - Social proof genom KPI:er och case studies
+      fallgropar:
+        - För mycket text - fokusera på visuals
+        - Ingen interaktion - tråkigt för publiken
+        - För långt - max 20 min
+        - Bristande kontrast i glassmorphism - tillgänglighetsproblem
+        - För tunga animationer - prestandaproblem
+        
+    - nr: 2
+      namn: Informationsarkitektur och kundresa
+      detaljer: |
+        Strukturera presentationen enligt optimal säljlogik:
+        
+        1. HERO/HOOK (30 sek)
+           - Kraftfull öppning med värdeproposition
+           - Visuellt impactfull intro
+           
+        2. PROBLEM (1 min)
+           - Kundernas smärtpunkter
+           - Kostnad av nuvarande situation
+           
+        3. LÖSNING - INKOMMANDE (3-4 min)
+           - Interaktiv demo av inkommande samtal
+           - Simulera faktiskt samtal
+           - Visa routing, FAQ, bokning live
+           
+        4. LÖSNING - UTGÅENDE (2-3 min)
+           - Demo av utgående samtal
+           - Kampanjer och uppföljningar
+           
+        5. TRYGGHET & TEKNIK (2 min)
+           - GDPR, säkerhet, 24/7
+           - Teknisk specifikation
+           
+        6. INTEGRATION (2 min)
+           - Visuellt nav med CRM, kalender, e-post
+           - Animerat dataflöde
+           
+        7. BEVIS (2 min)
+           - KPI:er som tickar upp
+           - 24/7, 40%, 85%, 50%
+           
+        8. PAKET & PROCESS (2 min)
+           - Tydliga tjänstepaket
+           - Implementeringstidslinje
+           
+        9. CALL TO ACTION (1 min)
+           - Tydlig nästa steg
+           - Enkel konvertering
+           
+      best_practices:
+        - Progressiv disclosure - en huvudidé per sektion
+        - Interaktiva element var 3-4 minut för att behålla uppmärksamhet
+        - Visuell hierarki: H1 → H2 → Body → Details
+        - Mikro-CTAs genom presentationen
+        - Keyboard navigation för smooth flow
+      fallgropar:
+        - Hoppa över problemformulering
+        - För tidigt prata om pris
+        - Glömma social proof
+        - Otydlig CTA
+        
+    - nr: 3
+      namn: Glassmorphism design system
+      detaljer: |
+        Implementera modern glassmorphism enligt 2025 best practices:
+        
+        Färgpalett (Telink):
+        - Primär: #00D9A3 (cyan/grön)
+        - Sekundär: #0066FF (blå)
+        - Bakgrund: #0A0F1A (mörk marinblå)
+        - Gradient: från #001F3F till #000A1A
+        
+        Glassmorphism komponenter:
+        - Backdrop-filter: blur(20px)
+        - Background: rgba(255, 255, 255, 0.05)
+        - Border: 1px solid rgba(255, 255, 255, 0.1)
+        - Box-shadow: 0 8px 32px rgba(0, 217, 163, 0.15)
+        - Gradient overlays för depth
+        
+        Typografi:
+        - Font: Inter eller system-ui
+        - H1: 56px/bold för hero
+        - H2: 42px/bold för sektioner
+        - H3: 28px/semibold
+        - Body: 18px/regular
+        - Small: 14px/regular
+        
+        Spacing system (8pt grid):
+        - xs: 8px
+        - sm: 16px
+        - md: 24px
+        - lg: 32px
+        - xl: 48px
+        - xxl: 64px
+        
+        Animationer:
+        - Fade in: 0.6s ease
+        - Slide: 0.4s cubic-bezier
+        - Hover: 0.2s ease
+        - Progress: 1.5s ease-in-out
+        
+      best_practices:
+        - Kontrast minst 4.5:1 för WCAG AA
+        - Prefers-reduced-motion support
+        - Gradient backgrounds för glassmorphism depth
+        - Subtle animations - inte distraherande
+        - Konsekvent spacing enligt 8pt grid
+      fallgropar:
+        - För låg kontrast mellan text och bakgrund
+        - För mycket blur - prestanda
+        - Inkonsekvent spacing
+        - Hårda animationer
+        
+    - nr: 4
+      namn: Interaktiv samtals-simulator
+      detaljer: |
+        Kärnan i presentationen - en live-demo där Zen kan simulera samtal:
+        
+        Komponenter:
+        1. Telefonskärm (iPhone-stil med glassmorphism)
+           - Inkommande/utgående samtalvy
+           - Realistisk UI med call controls
+        
+        2. Scenarion (förinställda exempel):
+           - Inkommande: Mötesbokning
+           - Inkommande: FAQ om priser
+           - Inkommande: Akut support
+           - Utgående: Uppföljning efter möte
+           - Utgående: Kampanj för ny tjänst
+        
+        3. Dialog-spelare:
+           - Simulerad konversation i real-time
+           - Text som "skrivs" fram med typewriter-effekt
+           - Visuell feedback när AI "tänker"
+           - Visa vad som händer i backend (routing, CRM-uppdatering)
+        
+        4. Live-visualization:
+           - Animerad dataflöde från samtal → CRM
+           - Kalender uppdateras live
+           - E-post skickas
+           - KPI-räknare tickar upp
+        
+        5. User controls:
+           - Play/Pause samtal
+           - Hoppa mellan scenarion
+           - Reset för ny demo
+           - Speed control (1x, 1.5x, 2x)
+        
+        Teknisk implementation:
+        - JavaScript state machine för dialog flow
+        - CSS animations för visuell feedback
+        - Event-driven architecture
+        - Keyboard shortcuts (Spacebar = play/pause, Arrow keys = navigate)
+        
+      best_practices:
+        - Realistisk timing (pausar som i verkliga samtal)
+        - Visuell feedback för varje action
+        - Progress indicator visar var i samtalet man är
+        - Möjlighet att hoppa till intressanta delar
+        - Tydliga labels på vad som händer i backend
+      fallgropar:
+        - För snabbt tempo - användaren hänger inte med
+        - För långsamt - tråkigt
+        - Oklart vad som händer i bakgrunden
+        - Tekniska fel utan graceful handling
+        
+    - nr: 5
+      namn: Visuella komponenter och mikro-interaktioner
+      detaljer: |
+        Skapa återanvändbara komponenter med glassmorphism:
+        
+        1. Glass Card
+           - Frosted bakgrund
+           - Hover: glow effect
+           - Click: ripple animation
+        
+        2. KPI Counter
+           - Animerad siffra som räknar upp
+           - Color-coded för typ (grönt = bra)
+           - Icon + siffra + label
+        
+        3. Integration Hub (visuellt nav)
+           - Central kärna (AI)
+           - Satelliter (CRM, Email, Calendar, etc.)
+           - Animerade connections med dataflöde
+           - Pulsande effekt på aktiva integrationer
+        
+        4. Timeline/Process
+           - Horisontell tidslinje
+           - Steg med checkmarks
+           - Progress bar som fylls i
+        
+        5. Feature Grid
+           - Responsiv grid (3-4 kolumner)
+           - Icons med glassmorphism cards
+           - Hover reveal för mer info
+        
+        6. Testimonial/Social Proof
+           - Citat i glass cards
+           - Företagsloggor med subtle glow
+           - Star ratings
+        
+        7. CTA Buttons
+           - Primary: Gradient med glow
+           - Secondary: Outlined glass
+           - Hover: Scale + brightness
+        
+        8. Progress Stepper
+           - Dots eller numbers
+           - Active state highlighted
+           - Click to navigate
+        
+      best_practices:
+        - Komponenter ska vara oberoende och återanvändbara
+        - Hover states för alla interaktiva element
+        - Loading states för async actions
+        - Empty states med vänlig feedback
+        - Micro-interactions under 300ms
+      fallgropar:
+        - Inkonsekvent styling mellan komponenter
+        - Saknade hover states
+        - Inga loading indicators
+        - För stora komponent-beroenden
+        
+    - nr: 6
+      namn: Navigation och presentation flow
+      detaljer: |
+        Skapa sömlös navigation genom presentationen:
+        
+        1. Fullscreen sections
+           - En sektion = en skärm
+           - Scroll snap eller manuell navigation
+           - Smooth scroll behavior
+        
+        2. Progress navigation
+           - Sticky dots/stepper i sidan
+           - Visar var man är (5/9)
+           - Click to jump
+        
+        3. Keyboard shortcuts
+           - Space/Arrow Right: Nästa
+           - Arrow Left: Föregående  
+           - Escape: Tillbaka till meny
+           - R: Reset demo
+           - Number keys: Hoppa till sektion
+        
+        4. Presenter mode
+           - F11 eller button för fullscreen
+           - Hide cursor efter inaktivitet
+           - Speaker notes? (optional)
+        
+        5. Transitions
+           - Fade + slide för sektioner
+           - Crossfade för content
+           - Stagger animations för flera element
+        
+      best_practices:
+        - Smooth 60fps animations
+        - Predictable navigation patterns
+        - Visual feedback för alla actions
+        - Keyboard accessible
+        - Touch-friendly för tablets
+      fallgropar:
+        - Jittery animations
+        - Förvirrande navigation
+        - Saknade keyboard shortcuts
+        - Inte optimerad för presentation-läge
+        
+    - nr: 7
+      namn: Data och innehåll
+      detaljer: |
+        Konkret innehåll baserat på bilderna och Telink's värdeproposition:
+        
+        KPI-siffror (från bild 7):
+        - 24/7: Tillgänglighet
+        - 40%: Effektivisering av hanteringstid
+        - 85%: Kundnöjdhet
+        - 50%: Kostnadsbesparing
+        
+        Features Inkommande (bild 1):
+        - Automatisk mottagning
+        - Smart routing till rätt avdelning/person
+        - Mötesbokning via kalenderintegration
+        - FAQ-hantering
+        
+        Features Utgående (bild 2):
+        - Automatiserade uppföljningar
+        - Kampanjhantering med segmentering
+        - Personliga pitchar baserade på kunddata
+        - Automatisk uppföljning via SMS/e-post
+        
+        Teknisk spec (bild 3):
+        - Språkstöd: Svenska & Engelska (fler på begäran)
+        - Tillgänglighet: 24/7 drift
+        - Plattform: Webbaserad + robusta API:er
+        - Datasäkerhet: GDPR-kompatibel
+        
+        Integrationer (bild 4):
+        - CRM-system: Sömlös synk
+        - Ärendehantering: Automatiska uppdateringar
+        - E-postintegration: Uppföljningsflöden
+        - Kalendersynk: Direkt bokning
+        
+        Paket (bild 5):
+        - Bas: För enklare behov
+        - Standard: Balanserad hantering
+        - Premium: Komplett för hög volym
+        
+        Process (bild 6):
+        1. Initial analys
+        2. Skräddarsydd anpassning
+        3. Integration
+        4. Driftsättning (5-10 dagar)
+        
+        Träning (bild 8):
+        1. Insamling av data
+        2. AI-träning på er terminologi
+        3. Finjustering baserat på feedback
+        4. Kontinuerlig förbättring
+        
+      best_practices:
+        - Konkreta siffror > vaga påståenden
+        - Benefits > features
+        - Kundorienterat språk
+        - Actionable insights
+      fallgropar:
+        - För teknisk jargong
+        - Vaga påståenden utan bevis
+        - För många features på en gång
+        
+    - nr: 8
+      namn: Teknisk implementation
+      detaljer: |
+        Byggnadsstrategi för optimal prestanda:
+        
+        HTML:
+        - Semantisk markup (section, article, header, etc.)
+        - ARIA-labels för tillgänglighet
+        - Data-attributes för state management
+        
+        CSS:
+        - Modern CSS (Grid, Flexbox, Custom Properties)
+        - Glassmorphism via backdrop-filter
+        - Responsive med container queries
+        - Animation via CSS transforms
+        - Mobile-first approach
+        
+        JavaScript:
+        - Vanilla JS (inga externa dependencies)
+        - Module pattern för organisation
+        - Event delegation för prestanda
+        - State machine för samtals-simulator
+        - Intersection Observer för scroll animations
+        - RequestAnimationFrame för smooth animations
+        
+        Prestanda:
+        - Lazy load off-screen content
+        - CSS will-change för animations
+        - Debounce scroll/resize events
+        - Minify för produktion
+        - Compressed assets
+        
+        Tillgänglighet:
+        - WCAG AA contrast ratios
+        - Keyboard navigation
+        - Focus indicators
+        - Prefers-reduced-motion
+        - Screen reader friendly
+        
+      best_practices:
+        - Progressive enhancement
+        - Graceful degradation
+        - Error boundaries
+        - Offline-first där möjligt
+        - Performance budget: <3s initial load
+      fallgropar:
+        - För många dependencies
+        - Inline styles överallt
+        - Dålig separation of concerns
+        - Memory leaks i event listeners
+        - Saknad error handling
+        
+    - nr: 9
+      namn: Testing och validering
+      detaljer: |
+        Quality assurance innan presentation:
+        
+        Funktionell testing:
+        - Alla interaktiva element fungerar
+        - Keyboard navigation fungerar
+        - Samtals-simulator spelar genom alla scenarion
+        - Navigation mellan sektioner är smooth
+        - Reset-funktionalitet fungerar
+        
+        Visuell testing:
+        - Glassmorphism renders korrekt
+        - Animations är smooth (60fps)
+        - Kontrast uppfyller WCAG AA
+        - Responsiv på olika skärmstorlekar
+        - Inga visual glitches
+        
+        Prestanda testing:
+        - Initial load <3 sekunder
+        - Animations utan jank
+        - Memory usage rimlig
+        - CPU usage under kontroll
+        - Fungerar på medel-kraftig laptop
+        
+        Cross-browser:
+        - Chrome/Edge (Chromium)
+        - Firefox
+        - Safari
+        - Fallback för äldre browsers
+        
+        Accessibility:
+        - Keyboard endast-navigering
+        - Screen reader compatible
+        - Kontrast checker
+        - Focus indicators synliga
+        
+        User testing:
+        - Kör igenom hela presentationen
+        - Testa alla scenarion
+        - Kontrollera timing
+        - Feedback från kollega
+        
+      best_practices:
+        - Test på riktig presentation-hårdvara
+        - Backup-plan om något fallerar
+        - Print-friendly fallback
+        - Offline-capability för säkerhet
+      fallgropar:
+        - Bara testa på din egen maskin
+        - Ignorera edge cases
+        - Ingen backup-plan
+        - Saknad offline-support
+        
+  todo_lista:
+    - Sätt upp projekt struktur (HTML/CSS/JS filer)
+    - Implementera grundläggande layout med fullscreen sections
+    - Skapa glassmorphism design system med CSS variabler
+    - Bygga Hero section med kraftfull öppning
+    - Implementera samtals-simulator komponent med state machine
+    - Skapa interaktiva scenarion (5 st inkommande + utgående)
+    - Bygga visuella komponenter (cards, counters, timeline, etc.)
+    - Implementera Integration Hub med animerat dataflöde
+    - Skapa KPI-sektion med animerade räknare
+    - Bygga paket-jämförelse och process-timeline
+    - Implementera navigation system (keyboard + progress stepper)
+    - Lägg till transitions och animations
+    - Skapa all copy baserat på bilder och värdeproposition
+    - Optimera för prestanda (lazy load, will-change, etc.)
+    - Implementera accessibility features (ARIA, keyboard, etc.)
+    - Testa på olika browsers och skärmstorlekar
+    - Skapa presenter mode med keyboard shortcuts
+    - Finslipa animationer och timing
+    - User testing och iterera
+    - Dokumentation för användning under presentation
+
+research_sammanfattning:
+  rekommendationer:
+    - Interaktiva B2B demos ökar konvertering med 47% jämfört med statiska presentations
+    - Optimal längd 15-20 minuter med interaktiva element var 3-4 minut
+    - Hands-on simulationer ökar minne och engagemang signifikant
+    - Glassmorphism är trending 2025 och skapar premium, modern känsla
+    - ROI och konkreta siffror är viktigast för B2B-beslut
+    - Social proof genom KPI:er bygger trovärdighet
+    - Customer-centric storytelling (problem → lösning → resultat) är mest effektivt
+    - Visuellt driven content > textmassor för B2B-presentations
+    - Keyboard shortcuts och smooth navigation kritiskt för live-demos
+    - WCAG tillgänglighet och kontrast måste prioriteras i glassmorphism
+    
+  referenser:
+    - Nielsen Norman Group: Heuristisk utvärdering och visual hierarchy
+    - WCAG 2.x: Tillgänglighetsstandard för kontrast och navigation
+    - Microsoft Fluent Design: Glassmorphism (Acrylic material) best practices
+    - Apple SwiftUI: Glassmorphism implementation i MacOS Big Sur / iOS
+    - Gartner Research: B2B köpbeteende och demo-effektivitet
+    - Boston Consulting Group: Data-driven sales process optimization
+    - Navattic, Walnut, Reprise: SaaS interactive demo platforms methodology
+    - HubSpot, Momentum.io: B2B sales presentation best practices
+    - LogRocket, Interaction Design Foundation: Glassmorphism design patterns
+    - Userpilot: Interactive product demo conversion metrics
+
+presentation:
+  koncept: |
+    En fullscreen single-page application designad specifikt för live säljpresentationer.
+    
+    Visuell stil:
+    - Dark mode med mörk marinblå bakgrund (#0A0F1A)
+    - Glassmorphism cards och komponenter
+    - Telink's cyan/grön (#00D9A3) och blå (#0066FF) som accent
+    - Smooth animations och transitions
+    - Minimal text, maximal visuell impact
+    
+    Interaktiv kärna:
+    - Simulerad telefonskärm där Zen kan "ringa" live-samtal
+    - 5 förinställda scenarion som spelar upp realistiska konversationer
+    - Visuell backend-visualisering (se hur data flödar till CRM/kalender)
+    - Live KPI-räknare som tickar upp under demos
+    
+    Navigation:
+    - 9 huvudsektioner med smooth scroll
+    - Progress stepper visar position
+    - Keyboard shortcuts för snabb navigation
+    - Presenter mode (fullscreen)
+    
+    Struktur:
+    1. Hero - Kraftfull intro (30s)
+    2. Problem - Smärtpunkter (1min)
+    3. Demo: Inkommande - Interaktiv simulator (4min)
+    4. Demo: Utgående - Kampanjer & uppföljning (3min)
+    5. Trygghet - GDPR, 24/7, teknik (2min)
+    6. Integration - Animerat nav hub (2min)
+    7. Bevis - KPI:er och resultat (2min)
+    8. Paket - Tydliga val och process (2min)
+    9. Call to Action - Nästa steg (1min)
+    
+    Total längd: ~17 minuter
+
+  beskrivning: |
+    När Zen öppnar presentationen möts kunden av en mörk, elegant skärm med
+    glassmorphism-effekter. Hero-sektionen presenterar värdepropositionsn kraftfullt.
+    
+    Med ett knapptryck scrollar Zen till Problem-sektionen som visuellt illustrerar
+    kundernas utmaningar (köbildning i telefon, höga kostnader, missade samtal).
+    
+    Därefter kommer hjärtat av presentationen: den interaktiva samtals-simulatorn.
+    En realistisk telefonskärm visas på skärmen. Zen väljer ett scenario, t.ex.
+    "Inkommande: Mötesbokning", och trycker play.
+    
+    En simulerad konversation börjar spela upp:
+    - Text skrivs fram i realtid med typewriter-effekt
+    - AI-assistenten "tänker" (visuell puls-animation)
+    - I sidopanelen ser man live hur backend fungerar:
+      * "Routing till kalender..."
+      * "Kontrollerar tillgänglighet..."
+      * "Skapar möte..."
+      * "Skickar bekräftelse-mail..."
+    - KPI-räknare tickar upp: "Tidsvinst: +15min"
+    
+    Zen kan pausa, spola, eller hoppa till nästa scenario. Varje scenario tar
+    60-90 sekunder och visar en annan use-case.
+    
+    Efter demos fortsätter presentationen genom trygghet (GDPR badges som glöder),
+    integration (en animerad hub där AI-kärnan pulserar och connections visas till
+    olika system), KPI-bevis (stora siffror som räknar upp från 0), paket-jämförelse
+    och slutligen en kraftfull CTA.
+    
+    Allt är keyboard-navigerat för smooth flow under presentationen.
+
+felhantering:
+  bildproblem:
+    instruktion: |
+      Bilderna används endast som REFERENS för att bygga visuella komponenter, inte för att integreras direkt.
+      Om någon bild är otydlig bygger vi motsvarande visuell komponent baserat på beskrivet innehåll.
+      
+  informationsluckor:
+    instruktion: |
+      All kritisk information finns tillgänglig från dokumentationen och bilderna.
+      Om något specifikt saknas (t.ex. exakt företagslogo) använder vi placeholder
+      eller generisk representation som kan uppdateras senare.
+      
+  tekniska_begränsningar:
+    instruktion: |
+      - Glassmorphism fungerar inte i äldre browsers → fallback till solid färger
+      - Animations kan vara tunga → prefers-reduced-motion fallback
+      - Backdrop-filter support → progressiv förbättring med vanlig blur som fallback
