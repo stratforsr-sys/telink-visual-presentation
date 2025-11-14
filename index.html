@@ -374,7 +374,7 @@
         /* Slide 4-5: Demo */
         .demo-layout {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 2.2fr 1fr;
             gap: var(--space-md);
             width: 100%;
             align-items: start;
@@ -385,10 +385,10 @@
             background: var(--glass-bg);
             backdrop-filter: blur(30px);
             border: 2px solid var(--glass-border);
-            border-radius: 32px;
-            padding: 10px;
+            border-radius: 42px;
+            padding: 8px;
             width: 100%;
-            max-width: 300px;
+            max-width: 340px;
             margin: 0 auto;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
             position: relative;
@@ -397,10 +397,9 @@
 
         .phone-screen {
             background: #000;
-            border-radius: 28px;
-            padding: 14px;
-            min-height: 400px;
-            max-height: 500px;
+            border-radius: 36px;
+            padding: 16px;
+            height: 600px;
             position: relative;
             overflow: hidden;
             display: flex;
@@ -412,43 +411,41 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            width: 120px;
-            height: 24px;
+            width: 100px;
+            height: 22px;
             background: #000;
-            border-radius: 0 0 16px 16px;
+            border-radius: 0 0 14px 14px;
             z-index: 10;
         }
 
         .call-header {
             text-align: center;
-            padding-top: 12px;
-            margin-bottom: 14px;
+            padding-top: 16px;
+            margin-bottom: 18px;
         }
 
         .call-status {
             color: var(--text-muted);
-            font-size: 10px;
-            margin-bottom: 4px;
+            font-size: 12px;
+            margin-bottom: 6px;
         }
 
         .call-name {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: 600;
-            margin-bottom: 4px;
+            margin-bottom: 6px;
         }
 
         .call-type {
-            font-size: 12px;
+            font-size: 14px;
             color: var(--primary);
         }
 
         .conversation-box {
             background: rgba(255, 255, 255, 0.05);
-            border-radius: 14px;
-            padding: 12px;
-            margin-bottom: 12px;
-            min-height: 200px;
-            max-height: 280px;
+            border-radius: 16px;
+            padding: 14px;
+            margin-bottom: 14px;
             overflow-y: auto;
             flex: 1;
         }
@@ -470,17 +467,17 @@
         }
 
         .message-label {
-            font-size: 10px;
+            font-size: 11px;
             color: var(--text-muted);
-            margin-bottom: 3px;
+            margin-bottom: 4px;
         }
 
         .message-text {
             background: rgba(255, 255, 255, 0.08);
-            padding: 10px;
-            border-radius: 8px;
-            font-size: 12px;
-            line-height: 1.4;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         .message.ai .message-text {
@@ -523,15 +520,15 @@
         }
 
         .call-button {
-            width: 48px;
-            height: 48px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             border: none;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 18px;
+            font-size: 20px;
             transition: all 0.3s ease;
             background: var(--glass-bg);
             backdrop-filter: blur(10px);
@@ -623,11 +620,11 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 10px;
+            padding: 10px 12px;
             border-radius: 6px;
             opacity: 0.3;
             transition: all 0.4s ease;
-            font-size: 12px;
+            font-size: 14px;
             background: rgba(255, 255, 255, 0.02);
             border-left: 2px solid transparent;
         }
@@ -690,7 +687,7 @@
         }
 
         .flow-graph-title {
-            font-size: 10px;
+            font-size: 11px;
             text-transform: uppercase;
             letter-spacing: 0.8px;
             color: var(--text-muted);
@@ -799,15 +796,15 @@
         .backend-realtime-log {
             background: rgba(0, 0, 0, 0.5);
             border-radius: 6px;
-            padding: 8px 10px;
+            padding: 10px 12px;
             font-family: 'Courier New', monospace;
-            font-size: 10px;
+            font-size: 12px;
             color: var(--primary);
             border: 1px solid rgba(0, 217, 163, 0.2);
-            min-height: 30px;
+            min-height: 36px;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 8px;
             position: relative;
             overflow: hidden;
         }
@@ -1318,14 +1315,14 @@
             <div class="slide" data-slide="3" style="padding: 20px 24px;">
                 <div class="slide-content">
                     <div style="width: 100%;">
-                        <div class="text-center" style="margin-bottom: 12px;">
-                            <h2 class="slide-title" style="font-size: clamp(20px, 3.5vw, 36px); margin-bottom: 6px;">Se AI:n i aktion</h2>
+                        <div class="text-center" style="margin-bottom: 16px;">
+                            <h2 class="slide-title" style="font-size: clamp(24px, 4vw, 42px); margin-bottom: 8px;">Se AI:n i aktion</h2>
                         </div>
 
-                        <div class="demo-layout" style="gap: 16px;">
-                            <div>
+                        <div class="demo-layout" style="gap: 16px; grid-template-columns: 2.5fr 1fr !important;">
+                            <div style="display: flex; flex-direction: column; gap: 12px; width: 100%;">
                                 <div class="scenario-selector">
-                                    <h3 style="font-size: 12px; font-weight: 700; margin-bottom: 6px; opacity: 0.9;">Välj scenario:</h3>
+                                    <h3 style="font-size: 13px; font-weight: 700; margin-bottom: 8px; opacity: 0.95;">Välj scenario:</h3>
                                     <div class="scenario-grid">
                                         <div class="scenario-card active" data-scenario="booking">
                                             <div class="scenario-icon">📅</div>
@@ -1345,8 +1342,8 @@
                                     </div>
                                 </div>
 
-                                <div class="backend-viz" style="margin-top: 10px;">
-                                    <h4 style="font-size: 12px; font-weight: 700; margin-bottom: 10px; opacity: 0.9;">Backend i realtid:</h4>
+                                <div class="backend-viz">
+                                    <h4 style="font-size: 14px; font-weight: 700; margin-bottom: 12px; opacity: 0.95;">Backend i realtid:</h4>
 
                                     <!-- Layer A: Step List -->
                                     <div class="backend-steps-container">
